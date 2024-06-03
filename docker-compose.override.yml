@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  jdchallenge.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - CONNECTION_STRING=Server=sql_server,1433;Database=JDChallenge;User=sa;Password=Pass123$;TrustServerCertificate=true;
+      - ELASTICSEARCH_SERVER=http://elasticsearch:9200
+      - KAFKA_SERVER=kafka:29092
+    ports:
+      - "8080"
+      - "8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
