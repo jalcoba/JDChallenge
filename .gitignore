@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin
+/JDChallenge.Api/bin
+/JDChallenge.Api/obj
+/JDChallenge.Business/bin/Debug/net8.0
+/JDChallenge.Business/obj
+/JDChallenge.DataAccess/bin/Debug/net8.0
+/JDChallenge.DataAccess/obj
+/JDChallenge.Domain/bin/Debug/net8.0
+/JDChallenge.Domain/obj
+/JDChallenge.Services/bin/Debug/net8.0
+/JDChallenge.Services/obj
+/JDChallenge.Tests/bin/Debug/net8.0
+/JDChallenge.Tests/obj
+/obj
