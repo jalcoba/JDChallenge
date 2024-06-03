@@ -29,7 +29,7 @@ public class IntegrationTest
         Assert.That(permissions, Is.Not.Null);
     }
 
-    [Test]
+    [Test, Order(1)]
     public async Task RequestPermission()
     {
         var data = new UpdatePermission() { Id = 1, EmployeeId = 1, PermissionTypeId = 1 };
@@ -38,7 +38,7 @@ public class IntegrationTest
         Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created));
     }
 
-    [Test]
+    [Test, Order(2)]
     public async Task ModifyPermission()
     {
         var data = new UpdatePermission() { Id = 1, EmployeeId = 1, PermissionTypeId = 1 };

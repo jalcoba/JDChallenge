@@ -6,8 +6,6 @@ namespace JDChallenge.Services.Interfaces
     {
         public Task<IEnumerable<Permission>> Get();
 
-        public Task<Permission?> Get(long id);
-
         public Task<Permission> Add(Permission request);
 
         public Task<Permission> Update(Permission request);

@@ -77,9 +77,9 @@ namespace JDChallenge.DataAccess.Migrations
                 columns: new[] { "Id", "Created", "Name", "SurName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4289), "Ana", "Perez" },
-                    { 2, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4291), "Dario", "Sanchez" },
-                    { 3, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4293), "Diego", "Lopez" }
+                    { 1, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9722), "Ana", "Perez" },
+                    { 2, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9723), "Dario", "Sanchez" },
+                    { 3, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9724), "Diego", "Lopez" }
                 });
 
             migrationBuilder.InsertData(
@@ -87,10 +87,10 @@ namespace JDChallenge.DataAccess.Migrations
                 columns: new[] { "Id", "Created", "Description", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4185), "Description product.read", "product.read" },
-                    { 2, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4186), "Description product.write", "product.write" },
-                    { 3, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4188), "Description order.read", "order.read" },
-                    { 4, new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4189), "Description order.write", "order.write" }
+                    { 1, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9638), "Description product.read", "product.read" },
+                    { 2, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9640), "Description product.write", "product.write" },
+                    { 3, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9641), "Description order.read", "order.read" },
+                    { 4, new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9643), "Description order.write", "order.write" }
                 });
 
             migrationBuilder.CreateIndex(

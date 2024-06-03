@@ -49,21 +49,21 @@ namespace JDChallenge.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4289),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9722),
                             Name = "Ana",
                             SurName = "Perez"
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4291),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9723),
                             Name = "Dario",
                             SurName = "Sanchez"
                         },
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4293),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9724),
                             Name = "Diego",
                             SurName = "Lopez"
                         });
@@ -128,28 +128,28 @@ namespace JDChallenge.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4185),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9638),
                             Description = "Description product.read",
                             Name = "product.read"
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4186),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9640),
                             Description = "Description product.write",
                             Name = "product.write"
                         },
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4188),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9641),
                             Description = "Description order.read",
                             Name = "order.read"
                         },
                         new
                         {
                             Id = 4,
-                            Created = new DateTime(2024, 6, 3, 17, 39, 51, 115, DateTimeKind.Utc).AddTicks(4189),
+                            Created = new DateTime(2024, 6, 3, 19, 24, 54, 190, DateTimeKind.Utc).AddTicks(9643),
                             Description = "Description order.write",
                             Name = "order.write"
                         });
@@ -158,7 +158,7 @@ namespace JDChallenge.DataAccess.Migrations
             modelBuilder.Entity("JDChallenge.Domain.Entities.Permission", b =>
                 {
                     b.HasOne("JDChallenge.Domain.Entities.Employee", "Employee")
-                        .WithMany("Permissions")
+                        .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -172,11 +172,6 @@ namespace JDChallenge.DataAccess.Migrations
                     b.Navigation("Employee");
 
                     b.Navigation("PermissionType");
-                });
-
-            modelBuilder.Entity("JDChallenge.Domain.Entities.Employee", b =>
-                {
-                    b.Navigation("Permissions");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,29 +16,29 @@ public class Repository<T> : IRepository<T> where T : Entity
         _dbSet = _context.Set<T>();
     }
 
-    public async Task<IEnumerable<T>> GetAll()
+    public virtual async Task<IEnumerable<T>> GetAll()
     {
         return await _dbSet.ToListAsync();
     }
 
-    public async Task<T?> Get(Expression<Func<T, bool>> expression)
+    public virtual async Task<T?> Get(Expression<Func<T, bool>> expression)
     {
         return await _dbSet.FirstOrDefaultAsync(expression);
     }
 
-    public async Task<T> Add(T entity)
+    public virtual async Task<T> Add(T entity)
     {
         await _context.AddAsync(entity);
         return entity;
     }
 
-    public T Update(T entity)
+    public virtual T Update(T entity)
     {
         _context.Update(entity);
         return entity;
     }
 
-    public void Delete(T entity)
+    public virtual void Delete(T entity)
     {
         _context.Remove(entity);
     }

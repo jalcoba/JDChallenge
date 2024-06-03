@@ -9,20 +9,20 @@ public class ApplicationDbContext : DbContext
     public DbSet<Employee> Employee { get; set; }
     
     public DbSet<Permission> Permissions { get; set; }
-
+    
     public DbSet<PermissionType> PermissionTypes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Employee>()
-            .HasMany(e => e.Permissions)
-            .WithOne(p => p.Employee)
-            .HasForeignKey(p => p.EmployeeId);
+        modelBuilder.Entity<Permission>()
+            .HasOne(ep => ep.Employee)
+            .WithMany()
+            .HasForeignKey(ep => ep.EmployeeId);
 
         modelBuilder.Entity<Permission>()
-            .HasOne(p => p.PermissionType)
+            .HasOne(ep => ep.PermissionType)
             .WithMany()
-            .HasForeignKey(p => p.PermissionTypeId);
+            .HasForeignKey(ep => ep.PermissionTypeId);
 
         modelBuilder.Entity<PermissionType>().HasData(
             new PermissionType
