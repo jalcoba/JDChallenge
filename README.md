@@ -13,4 +13,4 @@ Elasticsearch Integration
 Each permission change is indexed in Elasticsearch for easy querying and auditing. The Elasticsearch index used is "permission".
 
 Testing
-The project includes a test suite for each endpoint and integration tests.
+The project includes a test suite for each endpoint and integration tests. Make sure containers with elasticsearch and kafka images exist before running integration tests if you want them to pass.
